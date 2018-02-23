@@ -10,6 +10,9 @@
             <li>
                 {{ entry.date_added|date:'M d, Y H:i' }}
                 {{ entry.text|linebreaks }}
+            <p>
+                <a href="{% url 'learning_logs:edit_entry' entry.id %}" >edit entry</a>
+            </p>
             </li>
         {% empty %}
             <li>No topics have been added yet.</li>
